@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-function BestCustomer() {
-  const [year, setYear] = useState('');
+function GetBestCustomer() {
+  const [year, setYear] = useState(2023);
   const [bestCustomer, setBestCustomer] = useState([]);
 
   const fetchData = () => {
@@ -36,7 +36,7 @@ function BestCustomer() {
       </label>
       <button onClick={fetchData}>Fetch Data</button>
 
-      {BestCustomer.length > 0 && (
+      {bestCustomer.length > 0 && (
         <BarChart width={600} height={400} data={Object.entries(bestCustomer)}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="0" />
@@ -50,4 +50,4 @@ function BestCustomer() {
   );
 }
 
-export default BestCustomer;
+export default GetBestCustomer;

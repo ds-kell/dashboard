@@ -3,8 +3,9 @@ import GetKPIs from '../components/statistical/GetKPIs';
 import GetBills from '../components/statistical/GetBills';
 import './style.css'
 import SaleByYear from '../components/statistical/GetSaleByYear';
-import BestCustomerByStatus from '../components/statistical/GetBestCustomerByStatus';
-import BestCustomer from '../components/statistical/GetBestCustomer';
+import GetBestCustomerByStatus from '../components/statistical/GetBestCustomerByStatus';
+import GetBestCustomer from '../components/statistical/GetBestCustomer';
+import GetBestProduct from '../components/statistical/GetBestProduct';
 
 class Home extends React.Component {
   render() {
@@ -12,15 +13,17 @@ class Home extends React.Component {
       <div className='container dashboard-block'>
         <div className='row'>
           <div className='col-md-6'>
+            KPIs
             <GetKPIs></GetKPIs>
           </div>
           <div className='col-md-6'>
+            Bills
             <GetBills></GetBills>
           </div>
         </div>
         <div className='row'>
           <div className='col-md-6'>
-            <div>Sale by year</div>
+            Sale by year
             <SaleByYear></SaleByYear>
           </div>
           <div className='col-md-6'>
@@ -28,18 +31,18 @@ class Home extends React.Component {
           </div>
         </div>
         <div className='row'>
-          <div>Best customer by status</div>
+          Best customer by status
           <div>
-            <BestCustomerByStatus></BestCustomerByStatus>
+            <GetBestCustomerByStatus></GetBestCustomerByStatus>
           </div>
         </div>
         <div className='row'>
           <div className='col-md-6'>
-            <div>Best Customer</div>
-
+            Best Customer
+            <GetBestCustomer></GetBestCustomer>
           </div><div className='col-md-6'>
             <div>Best Product</div>
-
+            <GetBestProduct></GetBestProduct>
           </div>
         </div>
       </div>

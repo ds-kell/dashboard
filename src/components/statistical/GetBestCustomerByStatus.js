@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import * as d3 from 'd3';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-function BestCustomerByStatus() {
+function GetBestCustomerByStatus() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [status, setStatus] = useState('');
@@ -85,7 +85,7 @@ function BestCustomerByStatus() {
             onChange={(e) => setStartDate(e.target.value)}
           />
         </label>
-        <br />
+        {/* <br /> */}
         <label>
           End Date:
           <input
@@ -123,4 +123,4 @@ function BestCustomerByStatus() {
   );
 }
 
-export default BestCustomerByStatus;
+export default GetBestCustomerByStatus;
